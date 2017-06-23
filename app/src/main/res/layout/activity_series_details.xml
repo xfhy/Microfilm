@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_series_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xfhy.vmovie.activity.SeriesDetailsActivity">
+
+    <!--这是系列的详情页面-->
+
+    <!--这是播放器-->
+    <include layout="@layout/layout_video_play"/>
+
+    <!--中间的内容   显示详细信息-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--里面需要描述第多少集 和 标题-->
+            <TextView
+                android:id="@+id/tv_number_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/color_black"
+                android:textSize="20sp"/>
+
+            <!--最外层的title-->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/color_gray_9"
+                android:textSize="16sp"/>
+
+            <!--周几更新-->
+            <TextView
+                android:id="@+id/tv_weekly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:text="更新: "
+                android:textColor="@color/color_gray_9"
+                android:textSize="14sp"/>
+
+            <!--已更新至那一集-->
+            <TextView
+                android:id="@+id/tv_update_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:text="集数: "
+                android:textColor="@color/color_gray_9"
+                android:textSize="14sp"/>
+
+            <!--类型-->
+            <TextView
+                android:id="@+id/tv_tag_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="5dp"
+                android:text="类型: "
+                android:textColor="@color/color_gray_9"
+                android:textSize="14sp"/>
+
+            <!--描述内容-->
+            <com.xfhy.vmovie.view.ExpandableTextView
+                android:id="@+id/et_movie_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:text="...."
+                android:textColor="@color/color_black"
+                android:textSize="15sp"
+                />
+
+            <!--显示隐藏内容-->
+            <TextView
+                android:id="@+id/tv_show_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:background="@color/color_alpha_0"
+                android:drawableEnd="@drawable/dropdown"
+                android:drawablePadding="4dp"
+                android:focusable="true"
+                android:text="查看全部"
+                android:textColor="@color/color_gray_9"
+                />
+
+            <!--下面的分期的标题栏
+                app:tabIndicatorColor="@color/color_black"  下划线的颜色
+             -->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tl_series_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:paddingStart="10dp"
+                app:tabIndicatorColor="@color/color_black"
+                app:tabSelectedTextColor="@color/color_alpha_black_c"
+                app:tabTextColor="@color/color_alpha_black_6"/>
+
+            <!--下面的不同栏目所对应的不同的电影 集 分期-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_series_details_staging"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--这是下面的底部按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_white">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--分享-->
+            <TextView
+                android:id="@+id/tv_series_detail_bottom_share"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:drawableStart="@drawable/movie_detail_bottom_share_icon"
+                android:text="0"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--评论-->
+            <TextView
+                android:id="@+id/tv_series_detail_bottom_comment"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:drawableStart="@drawable/footer_comment_icon"
+                android:text="0"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--缓存-->
+            <TextView
+                android:id="@+id/tv_series_detail_bottom_cache"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:layout_marginEnd="10dp"
+                android:drawableStart="@drawable/details_cache"
+                android:text="缓存"/>
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

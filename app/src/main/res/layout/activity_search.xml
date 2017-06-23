@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_1"
+    android:orientation="vertical"
+    tools:context="com.xfhy.vmovie.activity.SearchActivity">
+
+    <!--搜索界面布局-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <!--这里应该是一个自定义View  然后有图标,有清除按钮
+                android:imeOptions="actionSearch"  类型是搜索
+                android:textCursorDrawable="@drawable/search_edit_color_cursor" 光标的颜色
+            -->
+            <EditText
+                android:id="@+id/et_search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/search_edit_bg"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/home_search"
+                android:hint="请输入要搜索的内容"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="30dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/color_alpha_9"
+                android:textColorHint="@color/color_alpha_9"
+                android:textCursorDrawable="@drawable/search_edit_color_cursor"
+                android:textSize="15sp"/>
+
+            <!--清空输入的按钮   默认是隐藏的-->
+            <ImageView
+                android:id="@+id/tv_search_input_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/search_input_del"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <!--取消-->
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="@color/color_alpha_9"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+    <!--历史输入列表-->
+    <ListView
+        android:id="@+id/lv_histroy_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--清空历史记录-->
+    <Button
+        android:id="@+id/btn_clear_histroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_search_clear_btn_bg"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:text="清除历史记录"
+        android:textColor="@color/color_alpha_9"
+        android:textSize="16sp"/>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--幕后文章栏目的下面的ViewPager里面的  title对应的 fragment-->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_article_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--幕后文章列表-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_behind_article_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+</LinearLayout>

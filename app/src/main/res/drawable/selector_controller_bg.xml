@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--侧滑菜单 RadioGroup 选中时的一个状态-->
+
+    <item android:state_checked="true">
+        <!--
+             使用一个层级的drawable,类似于FrameLayout,每一个item类似于一层
+             第一层是白色(会被第二层覆盖,除了最左边的那4dp)
+             第二层是有点儿透明的黑色,把下面的白色覆盖掉(除了最左边的那4dp)
+        -->
+        <!--为了绘制RadioGroup最左边的白条-->
+        <layer-list>
+            <!--白色-->
+            <item android:drawable="@color/color_alpha_c"/>
+            <item android:drawable="@color/color_gray_3" android:left="4dp"/>
+        </layer-list>
+    </item>
+
+</selector>

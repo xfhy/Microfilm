@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="60dp">
+
+    <!--设置界面的单个条目   这是普通的-->
+
+    <!--前面需要显示的主标题-->
+    <TextView
+        android:id="@+id/tv_setting_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:text="用户反馈"
+        android:textColor="@color/color_black"
+        android:textSize="18sp"/>
+
+    <!--右边的三角图片-->
+    <ImageView
+        android:id="@+id/iv_setting_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/arrows_r"/>
+
+    <!--描述信息-->
+    <TextView
+        android:id="@+id/tv_setting_item_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="40dp"
+        android:text="19.05M"
+        android:textColor="@color/color_gray_9"
+        android:textSize="17sp"/>
+
+    <!--条目之间分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:background="@color/color_alpha_black_1"/>
+
+</FrameLayout>

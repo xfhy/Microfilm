@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!--菜单页面-->
+
+    <!--半透明背景-->
+    <View
+        android:id="@+id/view_slide_menu_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aaaaaaaa"/>
+
+    <!--背景图-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/slide_bg"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <!--头像-->
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/default_avatar"/>
+
+        <!--设置-->
+        <ImageView
+            android:id="@+id/iv_slide_menu_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_toStartOf="@id/iv_avatar"
+            android:src="@drawable/side_set"/>
+
+        <!--点我登录-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="点我登录"
+            android:textColor="@color/color_gray_9"
+            android:textSize="16sp"/>
+
+        <!--通知-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/iv_avatar"
+            android:src="@drawable/side_message"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mine"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal">
+
+        <!--我的缓存-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/side_cache"
+            android:text="我的缓存"
+            android:textColor="@color/color_gray_9"
+            android:textSize="14sp"/>
+
+        <View
+            android:id="@+id/dividing_line"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@color/color_alpha_3"
+            />
+
+        <!--我喜欢的-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/side_likes"
+            android:text="我喜欢的"
+            android:textColor="@color/color_gray_9"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_main_controller"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="270dp"
+        android:orientation="vertical">
+
+        <!--首页-->
+        <RadioButton
+            android:id="@+id/rb_slide_menu_home"
+            style="@style/ContrRadioBtnStyle"
+            android:drawableStart="@drawable/selector_side_home_img"
+            android:text="首页"/>
+
+        <!--系列-->
+        <RadioButton
+            android:id="@+id/rb_slide_menu_series"
+            style="@style/ContrRadioBtnStyle"
+            android:drawableStart="@drawable/selector_side_series_img"
+            android:text="系列"/>
+
+        <!--幕后-->
+        <RadioButton
+            android:id="@+id/rb_slide_menu_behind"
+            style="@style/ContrRadioBtnStyle"
+            android:drawableStart="@drawable/selector_side_behind_img"
+            android:text="幕后"/>
+
+    </RadioGroup>
+
+    <!--菜单界面关闭-->
+    <ImageView
+        android:id="@+id/iv_main_close_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/side_close"/>
+
+</FrameLayout>

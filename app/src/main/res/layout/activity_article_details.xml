@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_article_details_root_view"
+    tools:context="com.xfhy.vmovie.activity.ArticleDetailsActivity">
+
+    <!--幕后文章界面的布局-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/color_black"
+        android:layout_height="55dp">
+
+        <!--返回按钮-->
+        <ImageView
+            android:id="@+id/iv_video_lan_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/video_lan_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="幕后文章"
+            android:textColor="@color/color_white"
+            android:textSize="14sp"
+            />
+
+        <!--分享按钮-->
+        <ImageView
+            android:id="@+id/iv_video_lan_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/video_lan_share"/>
+
+    </FrameLayout>
+
+    <!--中间的webView用来显示文章内容-->
+    <WebView
+        android:id="@+id/wv_article_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!--这是下面的底部按钮-->
+    <LinearLayout
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <!--喜欢的人的数量-->
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_details_like_num"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:drawableStart="@drawable/details_like"
+                android:text="105"/>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--分享-->
+            <TextView
+                android:id="@+id/tv_article_detail_bottom_share"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:drawableStart="@drawable/movie_detail_bottom_share_icon"
+                android:text="435"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--评论-->
+            <TextView
+                android:id="@+id/tv_article_detail_bottom_comment"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:drawableStart="@drawable/footer_comment_icon"
+                android:text="5"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

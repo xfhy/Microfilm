@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_video_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <!--这是视频播放的布局   单独抽取出来-->
+
+    <!--
+        视频控制器的默认位置在VideoView的父布局的底部
+    -->
+
+    <!--视频播放控件-->
+    <com.xfhy.vmovie.view.MyVideoView
+        android:id="@+id/vv_video_movie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"/>
+
+    <!--控制器布局-->
+    <FrameLayout
+        android:id="@+id/fl_ctrl_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--中心的播放暂停按钮-->
+        <CheckBox
+            android:id="@+id/cb_play_pause"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_play_pause_video_cb"
+            android:button="@null"/>
+
+        <!--下面的控制条-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <!--播放时间-->
+            <TextView
+                android:id="@+id/tv_current_time"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color_white"
+                android:textSize="12sp"/>
+
+            <!--进度条-->
+            <SeekBar
+                android:id="@+id/sb_video_progress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <!--视频总长度-->
+            <TextView
+                android:id="@+id/tv_video_total_time"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color_white"
+                android:textSize="12sp"/>
+
+            <!--全屏按钮-->
+            <CheckBox
+                android:id="@+id/cb_full_screen"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selector_full_screen_cb"
+                android:button="@null"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--返回按钮-->
+    <ImageView
+        android:id="@+id/iv_video_lan_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/video_lan_back"/>
+
+    <!--分享按钮-->
+    <ImageView
+        android:id="@+id/iv_video_lan_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/video_lan_share"/>
+
+</FrameLayout>
+

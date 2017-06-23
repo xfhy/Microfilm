@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/fragment_main_home_root_view"
+              android:orientation="vertical">
+
+    <!--首页内容区-->
+
+    <include layout="@layout/layout_home_titlebar"/>
+
+    <!--下面的页签   其实就是一个ViewPager
+    然后2个页签,两个RecyclerView
+    一个是最新电影列表
+    一个是电影频道
+    -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

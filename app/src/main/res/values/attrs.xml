@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义属性-->
+
+    <declare-styleable name="SettingNormalItem">
+        <!--fornat属性用来指定属性的类型
+			      dimension表示大小
+			      reference引用属性
+			      color是颜色
+			      -->
+        <!--这是设置item的标题-->
+        <attr name="setting_item_title" format="string"/>
+        <!--这是设置item的描述信息-->
+        <attr name="setting_item_info" format="string"/>
+        <!--这是设置item的是否显示描述信息-->
+        <attr name="setting_info_show" format="boolean"/>
+        <!--这是设置item的是否显示右边的图片-->
+        <attr name="setting_img_show" format="boolean"/>
+        <!--开关是否打开-->
+        <attr name="switch_open" format="boolean"/>
+    </declare-styleable>
+
+</resources>

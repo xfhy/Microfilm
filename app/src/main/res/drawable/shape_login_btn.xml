@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--登录界面的按钮的形状-->
+
+    <corners android:radius="30dp"/>
+    <stroke android:color="#32AFFF"/>
+    <solid android:color="#32AFFF"/>
+
+</shape>

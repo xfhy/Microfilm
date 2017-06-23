@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--搜索界面的输入文字框背景-->
+
+    <item>
+
+        <!--正方形-->
+        <shape android:shape="rectangle">
+
+            <!--颜色-->
+            <solid android:color="@color/color_alpha_0"/>
+            <!--圆角-->
+            <corners android:radius="3dp"/>
+            <!--描边-->
+            <stroke
+                android:width="0.5px"
+                android:color="@color/color_alpha_6"/>
+
+        </shape>
+
+    </item>
+
+</layer-list>

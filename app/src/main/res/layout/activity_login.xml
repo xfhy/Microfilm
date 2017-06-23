@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/fl_login_root_view"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!--登录界面布局-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--这是背景图片-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/login_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_height="60dp">
+
+                    <!--邮箱-->
+                    <EditText
+                        android:id="@+id/et_login_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="邮箱"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/color_black"
+                        android:textColorHint="@color/color_gray_9"
+                        android:textCursorDrawable="@drawable/search_edit_color_cursor"
+                        android:textSize="18sp"/>
+
+                    <!--清空输入的按钮   默认是隐藏的-->
+                    <ImageView
+                        android:id="@+id/tv_email_input_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/search_input_del"
+                        android:visibility="invisible"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_height="60dp">
+
+                    <!--密码-->
+                    <EditText
+                        android:id="@+id/et_login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="密码"
+                        android:imeOptions="actionGo"
+                        android:inputType="textPassword"
+                        android:textColor="@color/color_black"
+                        android:textColorHint="@color/color_gray_9"
+                        android:textSize="18sp"/>
+
+                    <!--清空输入的按钮   默认是隐藏的-->
+                    <ImageView
+                        android:id="@+id/tv_password_input_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/search_input_del"
+                        android:visibility="invisible"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <!--登录按钮-->
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/shape_login_btn"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="70dp"
+                    android:paddingStart="70dp"
+                    android:paddingTop="10dp"
+                    android:text="登录"
+                    android:textColor="@color/color_white"
+                    android:textSize="18sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="140dp">
+
+                    <TextView
+                        android:id="@+id/tv_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="使用社交平台登录注册"
+                        android:textColor="@color/color_gray_9"
+                        android:textSize="12sp"/>
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/tv_share"
+                        android:background="@color/color_gray_9"/>
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="0.5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/tv_share"
+                        android:background="@color/color_gray_9"/>
+
+                </RelativeLayout>
+
+                <!--登录从QQ-->
+                <ImageView
+                    android:id="@+id/iv_login_from_qq"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="180dp"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/login_icon1"/>
+
+                <!--从新浪登录-->
+                <ImageView
+                    android:id="@+id/iv_login_from_sina"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@id/iv_login_from_qq"
+                    android:layout_marginEnd="80dp"
+                    android:layout_toStartOf="@id/iv_login_from_qq"
+                    android:src="@drawable/login_icon3"/>
+
+                <!--登录从微信-->
+                <ImageView
+                    android:id="@+id/iv_login_from_wechat"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@id/iv_login_from_qq"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@id/iv_login_from_qq"
+                    android:src="@drawable/login_icon2"/>
+
+                <!--版权-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="270dp"
+                    android:gravity="center"
+                    android:text="©VMOVIER"
+                    android:textColor="#aaaaaa"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--返回按钮-->
+    <ImageView
+        android:id="@+id/iv_login_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/back_icon"/>
+
+</FrameLayout>

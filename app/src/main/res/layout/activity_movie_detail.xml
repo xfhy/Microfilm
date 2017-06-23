@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_movie_detail_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--电影详情页-->
+
+    <!--这是视频播放-->
+   <include layout="@layout/layout_video_play"/>
+
+    <!--中间的WebView-->
+    <WebView
+        android:id="@+id/wv_movie_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!--这是下面的底部按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <!--喜欢的人的数量-->
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_details_like_num"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:drawableStart="@drawable/details_like"
+                android:text="105"/>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--分享-->
+            <TextView
+                android:id="@+id/tv_movie_detail_bottom_share"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:drawableStart="@drawable/movie_detail_bottom_share_icon"
+                android:text="435"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--评论-->
+            <TextView
+                android:id="@+id/tv_movie_detail_bottom_comment"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:drawableStart="@drawable/footer_comment_icon"
+                android:paddingStart="30dp"
+                android:text="5"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--缓存-->
+            <TextView
+                android:id="@+id/tv_movie_detail_bottom_cache"
+                style="@style/MovieDetailsBottomBtnStyle"
+                android:layout_marginEnd="10dp"
+                android:drawableStart="@drawable/details_cache"
+                android:text="缓存"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

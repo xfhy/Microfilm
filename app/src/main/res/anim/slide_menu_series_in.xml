@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+       android:startOffset="250"
+       android:duration="250"
+       android:fromAlpha="0"
+       android:toAlpha="1">
+
+    <!--菜单中 系列选项进入动画-->
+
+</alpha>

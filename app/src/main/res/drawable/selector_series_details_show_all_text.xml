@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--这是系列详情页的 查看全部  和  收起简介的selector-->
+
+    <item android:state_pressed="true" android:text="收起简介"/>
+    <item android:state_pressed="false" android:text="查看全部"/>
+
+</selector>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="330dp"
+              android:background="@color/color_white"
+              android:orientation="vertical">
+
+    <!--系列子项-->
+
+    <ImageView
+        android:id="@+id/iv_series_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/guide_bg1"/>
+
+    <TextView
+        android:id="@+id/tv_series_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="电影自习室"
+        android:textColor="@color/color_black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_series_item_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="已更新至75集   432432人已订阅"
+        android:textColor="@color/color_alpha_black_6"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/tv_series_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="【电影自习室】是V电影网出品的一档影视教学视频栏目，主要面向初级影视爱好者，为大家分享影视方面的技巧，心得，每周更新两期。"
+        android:textColor="@color/color_alpha_black_c"
+        android:textSize="16sp"/>
+
+</LinearLayout>

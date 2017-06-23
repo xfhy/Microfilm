@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="200dp">
+
+    <!--这里的高度应该动态设置-->
+
+    <!--电影频道界面的子项-->
+
+    <!--背景-->
+    <ImageView
+        android:id="@+id/iv_channel_type_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--类型-->
+    <TextView
+        android:id="@+id/tv_channel_catename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/color_white"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="220dp">
+
+    <!--主界面电影列表的item布局-->
+
+    <!--背景:全部占满XY  android:scaleType="fitXY"-->
+    <ImageView
+        android:id="@+id/iv_movie_img"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/color_black"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_movie_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        />
+
+</FrameLayout>

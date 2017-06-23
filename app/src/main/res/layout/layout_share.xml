@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:background="@color/color_white"
+              android:orientation="vertical">
+
+    <!--分享PopupWindow的布局-->
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="分享"
+                android:textColor="@color/color_black"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/tv_share"
+                android:background="@color/color_gray_9"/>
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/tv_share"
+                android:background="@color/color_gray_9"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!--分享到微信-->
+        <ImageView
+            android:id="@+id/iv_share_wechat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/share_wechat"/>
+
+        <!--分享到朋友圈-->
+        <ImageView
+            android:id="@+id/iv_share_circle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/share_circle"/>
+
+        <!--分享到QQ-->
+        <ImageView
+            android:id="@+id/iv_share_qq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/share_qq"/>
+
+        <!--分享到QQ空间-->
+        <ImageView
+            android:id="@+id/iv_share_qzone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/share_qzone"/>
+
+        <!--分享到新浪-->
+        <ImageView
+            android:id="@+id/iv_share_vblog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/share_vblog"/>
+
+    </LinearLayout>
+
+    <!--取消分享-->
+    <ImageView
+        android:id="@+id/iv_share_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/share_dialog_close_icon"/>
+
+</LinearLayout>

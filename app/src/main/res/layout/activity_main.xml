@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xfhy.vmovie.activity.MainActivity">
+
+    <!--
+        主界面
+        页面分为2个区域
+        内容显示区域
+            几个碎片Fragment
+        控制区域
+            就是一个布局
+    -->
+
+    <!--内容显示区域-->
+    <FrameLayout
+        android:id="@+id/fl_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--菜单-->
+    <include
+        android:id="@+id/slide_menu"
+        layout="@layout/layout_slide_menu"
+        android:visibility="invisible"/>
+
+</FrameLayout>
