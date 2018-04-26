@@ -33,7 +33,6 @@ dependencies {
     compile 'com.android.support:support-v4:23.4.0'
     compile 'com.youth.banner:banner:1.4.9'
     compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
     compile 'com.kyleduo.switchbutton:library:1.4.6'

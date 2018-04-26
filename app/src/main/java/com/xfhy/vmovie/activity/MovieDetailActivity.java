@@ -358,7 +358,7 @@ public class MovieDetailActivity extends BaseActivity implements CompoundButton
         VideoData data = videoObject.getData();
         VideoContent content = data.getContent();
         VideoTopInfo videoTopInfo = content.getVideoTopInfoList().get(0);
-        VideoInfo videoInfo = videoTopInfo.getVideoInfoList().get(1);
+        VideoInfo videoInfo = videoTopInfo.getVideoInfoList().get(0);
         String videoUrl = videoInfo.getVideoUrl();
 
 
